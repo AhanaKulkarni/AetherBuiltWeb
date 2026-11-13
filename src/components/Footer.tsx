@@ -9,7 +9,7 @@ import { ArrowUpRight, ShieldCheck, Mail, Phone } from "lucide-react";
 export function Footer() {
   return (
     <footer className="border-t border-[#EAE7DF] bg-[#F4F1EA]/70 text-[#252B33] text-xs">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
+      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-16 sm:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
           {/* Col 1 & 2: Brand & Positioning */}
           <div className="lg:col-span-2 space-y-4">

@@ -25,23 +25,23 @@ export function CommandCenter() {
   const [activeView, setActiveView] = useState<CenterView>("plant");
 
   return (
-    <section id="command-center" className="py-20 sm:py-28 bg-[#F9F8F4] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="command-center" className="py-20 sm:py-28 lg:py-32 bg-[#F9F8F4] relative">
+      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
+        <div className="max-w-4xl mx-auto text-center space-y-4 mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
             <BarChart3 className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>EXECUTIVE &amp; FLOOR CONTROL ROOM</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#252B33] tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#252B33] tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             One command centre for your entire factory.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#6B7280] leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-[#6B7280] leading-relaxed max-w-3xl mx-auto">
             Eliminate conflicting reports. The AetherBuilt Command Center brings live production, asset telemetry, inventory buffers, and procurement activities into one unified cockpit.
           </p>
 
@@ -59,13 +59,13 @@ export function CommandCenter() {
                   key={tab.id}
                   type="button"
                   onClick={() => setActiveView(tab.id as CenterView)}
-                  className={`px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg transition-all flex items-center gap-2 ${
+                  className={`px-5 py-2.5 text-xs sm:text-sm font-bold rounded-xl transition-all flex items-center gap-2 cursor-pointer ${
                     activeView === tab.id
                       ? "bg-[#252B33] text-white shadow-xs"
                       : "bg-white text-[#6B7280] hover:text-[#252B33] border border-[#EAE7DF]"
                   }`}
                 >
-                  <Icon className="w-3.5 h-3.5" />
+                  <Icon className="w-4 h-4" />
                   <span>{tab.label}</span>
                 </button>
               );
@@ -74,7 +74,7 @@ export function CommandCenter() {
         </div>
 
         {/* Command Center Chassis */}
-        <div className="rounded-2xl border border-[#EAE7DF] bg-white shadow-xl overflow-hidden">
+        <div className="w-full max-w-[1360px] 2xl:max-w-[1500px] mx-auto rounded-3xl border border-[#EAE7DF] bg-white shadow-xl overflow-hidden">
           {/* Top Control Bar */}
           <div className="px-5 py-3.5 bg-[#FAF9F5] border-b border-[#EAE7DF] flex flex-wrap items-center justify-between gap-3 text-xs">
             <div className="flex items-center gap-3">

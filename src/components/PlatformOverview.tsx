@@ -53,28 +53,28 @@ export function PlatformOverview() {
   );
 
   return (
-    <section id="modules" className="py-20 sm:py-28 bg-[#F9F8F4] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="all-modules" className="py-20 sm:py-28 lg:py-32 bg-[#F9F8F4] relative">
+      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
+        <div className="max-w-4xl mx-auto text-center space-y-4 mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
             <Sparkles className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>UNIFIED PLATFORM ARCHITECTURE</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#252B33] tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#252B33] tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Everything your factory needs to stay connected.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#6B7280] leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-[#6B7280] leading-relaxed max-w-3xl mx-auto">
             One platform designed around the way manufacturing businesses actually operate — bridging floor execution, plant assets, and supply chain coordination.
           </p>
 
           {/* Interactive Category Filter Pills */}
-          <div className="flex flex-wrap items-center justify-center gap-2 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-2.5 pt-3">
             {[
               { id: "all", label: "All 12 Modules" },
               { id: "Execution", label: "Production & Execution" },

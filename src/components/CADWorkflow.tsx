@@ -22,29 +22,29 @@ export function CADWorkflow() {
   const activeStep = CAD_WORKFLOW_STEPS[selectedStepIndex];
 
   return (
-    <section id="cad-workflow" className="py-20 sm:py-28 bg-[#F9F8F4] border-t border-[#EAE7DF] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="cad-automation" className="py-20 sm:py-28 lg:py-32 bg-[#F9F8F4] border-t border-[#EAE7DF] relative">
+      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
+        <div className="max-w-4xl mx-auto text-center space-y-4 mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
             <FileCode className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>ENGINEERING AUTOMATION ROADMAP</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#252B33] tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#252B33] tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             From engineering drawings to manufacturing quotations.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#6B7280] leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-[#6B7280] leading-relaxed max-w-3xl mx-auto">
             Eliminate tedious manual drawing takeoffs. AetherBuilt is pioneering an end-to-end engineering pipeline that translates customer CAD blueprints directly into structured bills of materials, cycle time estimates, and commercial quotations.
           </p>
         </div>
 
         {/* 6-Stage Visual Timeline */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
+        <div className="w-full max-w-[1360px] 2xl:max-w-[1500px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 mb-10">
           {CAD_WORKFLOW_STEPS.map((step, idx) => {
             const isSelected = selectedStepIndex === idx;
             return (
@@ -52,16 +52,16 @@ export function CADWorkflow() {
                 key={step.step}
                 type="button"
                 onClick={() => setSelectedStepIndex(idx)}
-                className={`p-3.5 rounded-xl text-left border transition-all ${
+                className={`p-4 rounded-2xl text-left border transition-all cursor-pointer ${
                   isSelected
                     ? "bg-white border-[#F59E0B] shadow-sm ring-2 ring-[#F59E0B]/20"
                     : "bg-white/60 border-[#EAE7DF] hover:bg-white text-[#6B7280]"
                 }`}
               >
-                <div className="flex items-center justify-between text-[10px] font-bold mb-1">
+                <div className="flex items-center justify-between text-[11px] font-bold mb-1">
                   <span>STAGE {step.step}</span>
                   <span
-                    className={`px-1.5 py-0.2 rounded text-[9px] font-semibold ${
+                    className={`px-2 py-0.5 rounded text-[10px] font-bold ${
                       step.status.includes("Active Capability")
                         ? "bg-[#ECFDF5] text-[#065F46]"
                         : "bg-[#FFF4DE] text-[#B45309]"
@@ -83,7 +83,7 @@ export function CADWorkflow() {
         </div>
 
         {/* Technical Showcase Card */}
-        <div className="rounded-2xl border border-[#EAE7DF] bg-white p-6 sm:p-10 shadow-sm relative overflow-hidden">
+        <div className="w-full max-w-[1360px] 2xl:max-w-[1500px] mx-auto rounded-3xl border border-[#EAE7DF] bg-white p-6 sm:p-10 lg:p-12 shadow-sm relative overflow-hidden">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             {/* Left Detail Column */}
             <div className="lg:col-span-6 space-y-4">

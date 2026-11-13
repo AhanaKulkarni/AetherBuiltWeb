@@ -33,22 +33,64 @@ export const SITE_CONFIG = {
   },
 } as const;
 
+export interface NavDropdownItem {
+  title: string;
+  description: string;
+  href: string;
+  badge?: string;
+  iconName: string;
+}
+
 export interface NavLink {
   label: string;
   href: string;
   badge?: string;
+  dropdown?: NavDropdownItem[];
 }
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Platform", href: "#platform" },
-  { label: "Modules", href: "#modules" },
-  { label: "Workflow", href: "#workflow" },
-  { label: "Command Center", href: "#command-center" },
-  { label: "AI Copilot", href: "#ai-copilot", badge: "AI" },
-  { label: "CAD Automation", href: "#cad-workflow" },
-  { label: "Industries", href: "#audience" },
-  { label: "Why Us", href: "#differentiators" },
-  { label: "About", href: "#about" },
+  { label: "Platform", href: "/#platform" },
+  {
+    label: "Modules",
+    href: "/modules",
+    dropdown: [
+      {
+        title: "The 12 Core Modules",
+        description: "Complete operational suite across execution, plant assets & supply chain",
+        href: "/modules#all-modules",
+        iconName: "Layers",
+      },
+      {
+        title: "Connected Workflow",
+        description: "Synchronized pipeline from order ingest to delivery dispatch",
+        href: "/modules#workflow",
+        iconName: "Zap",
+      },
+      {
+        title: "Command Center",
+        description: "Unified factory floor cockpit with live machine telemetry and alerts",
+        href: "/modules#command-center",
+        iconName: "BarChart3",
+      },
+      {
+        title: "AI Copilot",
+        description: "Conversational operational intelligence grounded in plant records",
+        href: "/modules#ai-copilot",
+        badge: "AI",
+        iconName: "Bot",
+      },
+      {
+        title: "CAD Automation",
+        description: "Engineering drawing interpretation to bill of materials & quotations",
+        href: "/modules#cad-automation",
+        badge: "Roadmap",
+        iconName: "FileCode",
+      },
+    ],
+  },
+  { label: "Industries", href: "/#industries" },
+  { label: "About", href: "/about" },
+  { label: "Why Us", href: "/why-us" },
 ];
 
 export interface ModuleItem {

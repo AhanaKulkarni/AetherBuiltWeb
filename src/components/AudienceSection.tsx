@@ -27,29 +27,29 @@ export function AudienceSection() {
   const activePersona = TARGET_AUDIENCES[activeRoleIndex];
 
   return (
-    <section id="audience" className="py-20 sm:py-28 bg-[#FAF9F5] border-t border-[#EAE7DF] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="industries" className="py-20 sm:py-28 lg:py-32 bg-[#FAF9F5] border-t border-[#EAE7DF] relative">
+      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
+        <div className="max-w-4xl mx-auto text-center space-y-4 mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
             <Users className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>BUILT FOR INDUSTRIAL LEADERS</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#252B33] tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#252B33] tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Designed around the people who keep factories moving.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#6B7280] leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-[#6B7280] leading-relaxed max-w-3xl mx-auto">
             From the factory owner tracking weekly shipments to the shift supervisor resolving station bottlenecks, AetherBuilt is engineered for the ground reality of industrial manufacturing.
           </p>
         </div>
 
         {/* Role Selector Tabs */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-10">
+        <div className="flex flex-wrap items-center justify-center gap-2.5 mb-12">
           {TARGET_AUDIENCES.map((persona, idx) => {
             const Icon = ROLE_ICONS[persona.role] || Users;
             const isSelected = activeRoleIndex === idx;
@@ -73,7 +73,7 @@ export function AudienceSection() {
         </div>
 
         {/* Selected Persona Showcase Card */}
-        <div className="max-w-4xl mx-auto rounded-2xl border border-[#EAE7DF] bg-white p-6 sm:p-10 shadow-sm">
+        <div className="w-full max-w-[1360px] 2xl:max-w-[1500px] mx-auto rounded-3xl border border-[#EAE7DF] bg-white p-8 sm:p-12 shadow-sm">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left Description Column */}
             <div className="md:col-span-7 space-y-4">

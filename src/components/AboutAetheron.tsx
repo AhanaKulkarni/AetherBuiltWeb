@@ -6,9 +6,9 @@ import { ExternalLink, ShieldCheck, ArrowRight } from "lucide-react";
 
 export function AboutAetheron() {
   return (
-    <section id="about" className="py-20 sm:py-24 bg-[#FAF9F5] border-t border-[#EAE7DF] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto rounded-2xl border border-[#EAE7DF] bg-white p-8 sm:p-10 shadow-sm">
+    <section id="about" className="py-20 sm:py-28 lg:py-32 bg-[#FAF9F5] border-t border-[#EAE7DF] relative">
+      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="w-full max-w-[1360px] 2xl:max-w-[1500px] mx-auto rounded-3xl border border-[#EAE7DF] bg-white p-8 sm:p-12 shadow-sm">
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-[#EAE7DF]">
             <div className="flex items-center gap-4">
               <div className="relative w-14 h-14 rounded-xl bg-white border border-[#EAE7DF] shadow-xs flex items-center justify-center p-2 overflow-hidden flex-shrink-0">

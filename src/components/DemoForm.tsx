@@ -136,9 +136,9 @@ export function DemoForm() {
   };
 
   return (
-    <section id="demo" className="py-20 sm:py-28 bg-[#FAF9F5] border-t border-[#EAE7DF] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+    <section id="demo" className="py-20 sm:py-28 lg:py-32 bg-[#FAF9F5] border-t border-[#EAE7DF] relative">
+      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="w-full max-w-[1360px] 2xl:max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           {/* Left Column: Messaging & Direct Contact Details */}
           <div className="lg:col-span-5 space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">

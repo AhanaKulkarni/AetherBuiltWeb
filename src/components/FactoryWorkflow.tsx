@@ -38,23 +38,23 @@ export function FactoryWorkflow() {
   const activeStep = CONNECTED_WORKFLOW_STEPS[activeStepIndex];
 
   return (
-    <section id="workflow" className="py-20 sm:py-28 bg-[#FAF9F5] border-y border-[#EAE7DF] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="workflow" className="py-20 sm:py-28 lg:py-32 bg-[#FAF9F5] border-y border-[#EAE7DF] relative">
+      <div className="w-full max-w-[1440px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
         {/* Section Header */}
-        <div className="max-w-3xl mx-auto text-center space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
+        <div className="max-w-4xl mx-auto text-center space-y-4 mb-14">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full text-xs font-bold bg-[#FFF4DE] text-[#B45309] border border-[#FDE68A]">
             <Zap className="w-3.5 h-3.5 text-[#F59E0B]" />
             <span>CONNECTED OPERATIONAL ARCHITECTURE</span>
           </div>
 
           <h2
-            className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#252B33] tracking-tight"
+            className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#252B33] tracking-tight leading-tight"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Manufacturing is connected. Your operations should be too.
           </h2>
 
-          <p className="text-base sm:text-lg text-[#6B7280] leading-relaxed">
+          <p className="text-base sm:text-lg lg:text-xl text-[#6B7280] leading-relaxed max-w-3xl mx-auto">
             Follow how a single customer requirement travels through AetherBuilt — automatically synchronizing engineering, inventory buffers, supplier RFQs, machine telemetry, and final logistics.
           </p>
 
@@ -63,16 +63,16 @@ export function FactoryWorkflow() {
             <button
               type="button"
               onClick={() => setIsPlaying(!isPlaying)}
-              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-white border border-[#EAE7DF] text-xs font-semibold text-[#252B33] hover:border-[#F59E0B] shadow-2xs transition-colors"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-[#EAE7DF] text-xs font-bold text-[#252B33] hover:border-[#F59E0B] shadow-2xs transition-colors cursor-pointer"
             >
               {isPlaying ? (
                 <>
-                  <Pause className="w-3.5 h-3.5 text-[#B45309]" />
+                  <Pause className="w-4 h-4 text-[#B45309]" />
                   <span>Pause Walkthrough</span>
                 </>
               ) : (
                 <>
-                  <Play className="w-3.5 h-3.5 text-[#F59E0B] fill-current" />
+                  <Play className="w-4 h-4 text-[#F59E0B] fill-current" />
                   <span>Auto-Play Sequence</span>
                 </>
               )}
@@ -84,7 +84,7 @@ export function FactoryWorkflow() {
                 setIsPlaying(false);
                 setActiveStepIndex(0);
               }}
-              className="inline-flex items-center gap-1 px-3 py-2 rounded-lg bg-white border border-[#EAE7DF] text-xs font-medium text-[#6B7280] hover:text-[#252B33] transition-colors"
+              className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-white border border-[#EAE7DF] text-xs font-semibold text-[#6B7280] hover:text-[#252B33] transition-colors cursor-pointer"
               title="Reset to beginning"
             >
               <RotateCcw className="w-3.5 h-3.5" />
@@ -94,7 +94,7 @@ export function FactoryWorkflow() {
         </div>
 
         {/* Step Progression Bar / Node Track */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 mb-8">
+        <div className="w-full max-w-[1360px] 2xl:max-w-[1500px] mx-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 mb-8">
           {CONNECTED_WORKFLOW_STEPS.map((step, idx) => {
             const isActive = activeStepIndex === idx;
             const isCompleted = idx < activeStepIndex;
@@ -107,24 +107,24 @@ export function FactoryWorkflow() {
                   setIsPlaying(false);
                   setActiveStepIndex(idx);
                 }}
-                className={`p-3 rounded-xl text-left border transition-all duration-200 ${
+                className={`p-4 rounded-2xl text-left border transition-all duration-200 cursor-pointer ${
                   isActive
                     ? "bg-white border-[#F59E0B] shadow-sm ring-2 ring-[#F59E0B]/20"
                     : isCompleted
-                    ? "bg-white/80 border-[#A7F3D0] text-[#065F46]"
-                    : "bg-white/40 border-[#EAE7DF] text-[#6B7280] hover:bg-white"
+                    ? "bg-white/90 border-[#A7F3D0] text-[#065F46]"
+                    : "bg-white/50 border-[#EAE7DF] text-[#6B7280] hover:bg-white"
                 }`}
               >
                 <div className="flex items-center justify-between text-[11px] font-bold mb-1">
                   <span>STEP {step.step}</span>
                   {isCompleted ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-[#10B981]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#10B981]" />
                   ) : isActive ? (
-                    <span className="w-2 h-2 rounded-full bg-[#F59E0B] animate-pulse" />
+                    <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B] animate-pulse" />
                   ) : null}
                 </div>
                 <div
-                  className={`text-xs font-semibold truncate ${
+                  className={`text-xs font-bold truncate ${
                     isActive ? "text-[#252B33]" : "text-[#4B5563]"
                   }`}
                 >
@@ -136,7 +136,7 @@ export function FactoryWorkflow() {
         </div>
 
         {/* Active Stage Visual Showcase Card */}
-        <div className="rounded-2xl border border-[#EAE7DF] bg-white p-6 sm:p-10 shadow-sm relative overflow-hidden">
+        <div className="w-full max-w-[1360px] 2xl:max-w-[1500px] mx-auto rounded-3xl border border-[#EAE7DF] bg-white p-6 sm:p-10 lg:p-12 shadow-sm relative overflow-hidden">
           {/* Subtle background ambient pulse */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#FFF4DE]/40 rounded-full blur-3xl pointer-events-none -z-10" />
 
